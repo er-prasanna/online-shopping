@@ -23,6 +23,7 @@
 <title>Online Shopping - ${title}</title>
 <script>
 	window.menu = '${title}';
+	window.category = '${id}';
 </script>
 <!-- Bootstrap core CSS -->
 <link href="${vendor}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,6 +61,14 @@
 			<c:if test="${userClickContact == true }">
 				<!-- load contact us page -->
 				<%@include file="contact.jsp"%>
+			</c:if>
+			<c:if test="${userClickAllProducts == true }">
+				<!-- load contact us page -->
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			<c:if test="${userClickCategoryProduct == true }">
+				<!-- load contact us page -->
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 		</div>
 		<!-- End of Content class -->
